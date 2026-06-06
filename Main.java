@@ -11,7 +11,7 @@ public class Main extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Instantiate the custom rendering graphics panel
+        //  rendering graphics panel
         VisualizerPanel visualizerPanel = new VisualizerPanel(WIDTH, HEIGHT);
         add(visualizerPanel, BorderLayout.CENTER);
 
