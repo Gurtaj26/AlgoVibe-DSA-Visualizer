@@ -10,7 +10,7 @@ public class VisualizerPanel extends JPanel {
     private final int maxPanelHeight;
 
     public VisualizerPanel(int panelWidth, int panelHeight) {
-        setBackground(Color.BLACK); // Monochrome aesthetic matching your resume layout
+        setBackground(Color.BLACK); // Monochrome aesthetic m
         int numBars = panelWidth / barWidth;
         this.array = new int[numBars];
         this.maxPanelHeight = panelHeight;
@@ -33,7 +33,7 @@ public class VisualizerPanel extends JPanel {
     public void updateHighlights(int idx1, int idx2) {
         this.compareIdx1 = idx1;
         this.compareIdx2 = idx2;
-        repaint(); // Re-trigger paintComponent with new index positions
+        repaint(); 
     }
 
     public void clearHighlights() {
@@ -43,7 +43,7 @@ public class VisualizerPanel extends JPanel {
     }
 
     public void startSorting() {
-        // Instantiate our dedicated background worker engine and pass 'this' panel reference
+        
         BubbleSortWorker sortingEngine = new BubbleSortWorker(this);
         new Thread(sortingEngine).start();
     }
