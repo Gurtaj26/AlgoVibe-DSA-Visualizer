@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 public class BubbleSortWorker implements Runnable {
     private final VisualizerPanel visualizerPanel;
 
-    // Use a Constructor Dependency Injection pattern to maintain clean component lines
+    
     public BubbleSortWorker(VisualizerPanel visualizerPanel) {
         this.visualizerPanel = visualizerPanel;
     }
@@ -16,10 +16,10 @@ public class BubbleSortWorker implements Runnable {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
                 
-                // Alert visualizer panel of the specific two array indices currently being evaluated
+                // Alert visualizer panel 
                 visualizerPanel.updateHighlights(j, j + 1);
                 
-                // Intentionally delay processing execution for a brief moment to make sorting visible
+                //  make sorting visible
                 try { 
                     Thread.sleep(12); 
                 } catch (InterruptedException e) {
@@ -35,7 +35,7 @@ public class BubbleSortWorker implements Runnable {
             }
         }
         
-        // Finalize execution path routines safely
+        //  execution path
         visualizerPanel.clearHighlights();
         JOptionPane.showMessageDialog(visualizerPanel, "Sorting Algorithm Processing Completed!");
     }
